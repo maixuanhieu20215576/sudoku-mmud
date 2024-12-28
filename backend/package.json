@@ -1,0 +1,21 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "backend of Sudoku",
+  "main": "server.js",
+  "scripts": {
+    "test": "npm test",
+    "dev": "nodemon -L server.js"
+  },
+  "keywords": [
+    "Sudoku"
+  ],
+  "author": "daovannguyenhuy_maixuanhieu_nguyentienthanh",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "mongoose": "^8.9.2",
+    "nodemon": "^3.1.9"
+  }
+}
