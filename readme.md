@@ -2,9 +2,9 @@
 
 ## Chạy?
 0. Tạo thư mục `.env` trong folder `backend`, clone từ `.envexample` và sửa theo máy mình. 
-1. Chạy backend:  `npm run dev` trong folder backend 
+1. Chạy backend:  `npm i `, `npm run dev` trong folder backend 
 2. Chạy database:  `docker compose up ` trong thư mục gốc
-3. Chạy frontend: `npm run dev` trong thư mục frontend (chưa code :>)
+3. Chạy frontend: `npm i`, `npm run dev` trong thư mục frontend (chưa code :>)
 
 |Service|Port|
 |:---|:---|

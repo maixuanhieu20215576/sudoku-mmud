@@ -2,8 +2,8 @@ const express = require('express')
 const cors = require('cors')
 const mongoose = require('mongoose');
 require('dotenv').config();
-var app = express()
-console.log(process.env) // remove this after you've confirmed it is working
+const app = express()
+
 app.use(cors())
 
 
