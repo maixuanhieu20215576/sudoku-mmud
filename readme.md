@@ -1,10 +1,10 @@
 # SUDOKU WITH ZKP
 
 ## Chạy?
-Đến thư mục gốc, chạy lệnh
-```
-docker compose up -d
-```
+0. Tạo thư mục `.env` trong folder `backend`, clone từ `.envexample` và sửa theo máy mình. 
+1. Chạy backend:  `npm run dev` trong folder backend 
+2. Chạy database:  `docker compose up ` trong thư mục gốc
+3. Chạy frontend: `npm run dev` trong thư mục frontend (chưa code :>)
 
 |Service|Port|
 |:---|:---|
@@ -13,13 +13,11 @@ docker compose up -d
 |Backend|4000|
 |Frontend|3000|
 
-**Chú ý:** Nếu chạy mà hiện lỗi như ảnh sau (do server chạy khi database chưa init xong), chờ 1 lúc và vào file `backend/server.js` - `Ctrl + S` lại để khởi động lại backend.
-![alt text](image.png)
+
 
 ## Xem database?
-localhost:8081
+*localhost:8081*
 
-![alt text](image-1.png)
 ## Database
 
 ![alt text](image-2.png)

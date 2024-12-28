@@ -1,8 +1,9 @@
-var express = require('express')
-var cors = require('cors')
+const express = require('express')
+const cors = require('cors')
 const mongoose = require('mongoose');
+require('dotenv').config();
 var app = express()
-
+console.log(process.env) // remove this after you've confirmed it is working
 app.use(cors())
 
 
@@ -13,7 +14,7 @@ app.get('/products/:id', function (req, res, next) {
 const start = async () => {
   try {
     await mongoose.connect(
-      'mongodb://root:example@database:27017/sudoku?authSource=admin',//sửa sau nhé :v
+      process.env.MONGO_URI
     );
     app.listen(4000, () => console.log("Server started on port 4000"));
   } catch (error) {

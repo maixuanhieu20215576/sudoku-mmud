@@ -25,14 +25,3 @@ services:
       ME_CONFIG_MONGODB_ADMINPASSWORD: example
       ME_CONFIG_MONGODB_URL: mongodb://root:example@database:27017/sudoku?authSource=admin
       ME_CONFIG_BASICAUTH: false
-  backend:
-    build: ./backend
-    restart: always
-    ports:
-      - 4000:4000
-    environment:
-      - MONGO_URI=mongodb://root:example@database:27017/sudoku?authSource=admin
-    volumes:
-      - ./backend:/app
-    depends_on:
-      - database
