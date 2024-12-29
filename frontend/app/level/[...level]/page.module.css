@@ -1,0 +1,15 @@
+.container {
+    position: relative;
+}
+.header {
+    padding: 1rem 8rem;
+    border-bottom: 0.1rem solid rgb(229, 235, 242);
+}
+.content {
+    flex: 1;
+    display: flex;
+    padding: 0.5rem 8rem 0rem 8rem;
+    min-height: 100rem;
+    gap: 1rem;
+    align-items: flex-start;
+}

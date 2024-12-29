@@ -19,6 +19,7 @@
     "helmet": "^8.0.0",
     "mongoose": "^8.9.2",
     "nodemon": "^3.1.9",
+    "snarkjs": "^0.7.5",
     "xss-clean": "^0.1.4"
   }
 }
