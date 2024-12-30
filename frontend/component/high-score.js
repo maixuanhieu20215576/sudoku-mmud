@@ -1,40 +1,17 @@
+'use client';
+import { useHighScoreContext } from '@/context/high-score';
 import styles from './high-score.module.css';
-const fakelist = [
-    { name: 'xuanhieu', totalTime: '1:00' },
-    { name: 'tienthanh', totalTime: '2:00' },
-    { name: 'sontungmtp', totalTime: '5:00' },
-    { name: 'hieuThu2', totalTime: '10:00' },
-    { name: 'hieuThu2', totalTime: '10:00' },
-    { name: 'hieuThu2', totalTime: '10:00' },
-    { name: 'hieuThu2', totalTime: '10:00' },
-    { name: 'hieuThu2', totalTime: '10:00' },
-    { name: 'hieuThu2', totalTime: '10:00' },
-    { name: 'hieuThu2', totalTime: '10:00' },
-    { name: 'hieuThu2', totalTime: '10:00' },
-    { name: 'hieuThu2', totalTime: '10:00' },
-    { name: 'hieuThu2', totalTime: '10:00' },
-    { name: 'hieuThu2', totalTime: '10:00' },
-    { name: 'hieuThu2', totalTime: '10:00' },
-    { name: 'hieuThu2', totalTime: '10:00' },
-    { name: 'hieuThu2', totalTime: '10:00' },
-    { name: 'hieuThu2', totalTime: '10:00' },
-    { name: 'hieuThu2', totalTime: '10:00' },
-    { name: 'hieuThu2', totalTime: '10:00' },
-    { name: 'hieuThu2', totalTime: '10:00' },
-    { name: 'hieuThu2', totalTime: '10:00' },
-    { name: 'hieuThu2', totalTime: '10:00' },
-    { name: 'hieuThu2', totalTime: '10:00' },
-    { name: 'hieuThu2', totalTime: '10:00' },
-    { name: 'hieuThu2', totalTime: '10:00' },
-];
-function HighScore({ data, level }) {
+import { memo } from 'react';
+
+function HighScore({ level }) {
+    const { listhighscore } = useHighScoreContext();
     return (
         <div className={styles.container}>
             <h2 className={styles.title}>High Score</h2>
             <div className={styles.scorewrapper}>
-                {fakelist.map((item, index) => {
-                    return <HighScoreItem key={index} data={item} index={index + 1} />;
-                })}
+                {listhighscore.map((item, index) => (
+                    <HighScoreItem key={item._id} index={index + 1} data={item} />
+                ))}
             </div>
         </div>
     );
@@ -49,4 +26,4 @@ function HighScoreItem({ data, index }) {
     );
 }
 
-export default HighScore;
+export default memo(HighScore);

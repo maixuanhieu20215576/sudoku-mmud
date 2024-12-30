@@ -13,6 +13,8 @@
   "author": "daovannguyenhuy_maixuanhieu_nguyentienthanh",
   "license": "ISC",
   "dependencies": {
+    "circomlib": "^0.0.18",
+    "circomlibjs": "^0.1.7",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",

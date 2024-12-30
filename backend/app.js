@@ -15,6 +15,11 @@ app.use(express.json()); // Parse JSON bodies
 
 app.use('/level', levelRoute);
 app.use('/session', sessionRoute);
+app.post('/verify', (req, res) => {
+    const { proof, publicSignals } = req;
+    console.log(proof, publicSignals);
+    res.json({ message: 'ok' });
+});
 const uri = process.env.MONGO_URI;
 
 mongoose
